@@ -307,7 +307,7 @@ body {
 
 .loginsignupcontainer {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -410,7 +410,17 @@ body {
         width: 85vw;
     }
 }
-
+@media screen and (max-width: 1000px) {
+    .setting {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        width: 95%;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+    }
+}
 @media screen and (max-width: 860px) {
     .signuploginform {
         display: flex;
