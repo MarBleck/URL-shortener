@@ -4,7 +4,7 @@ This is an URL shortener written in php with connection to mysql
 ## How to use
 You have to clone this reposetory 
 
-# Zamba LXC Toolbox
+# URL-shortener
 
 ## About
 This URL shortener is written in PHP, and it's lightweight with all basic features and some extra features.
