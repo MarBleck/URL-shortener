@@ -63,8 +63,12 @@ if (isset($_SESSION['username'])) {
                                 ';
                                 // Check if the $_GET parameter info exist 
                                 if (isset($_GET['info'])) {
+                                    // Displays the user the output that the URL/s was created
+                                    if ($_GET['info'] == "createlink") {
+                                        echo '<h2 id="updateinfo" style="color:green;">The URL was created</h2><script>setTimeout(() => {const elem = document.getElementById("updateinfo");elem.parentNode.removeChild(elem);}, 4000);</script>';
+                                    }
                                     // Displays the user the output that the URL/s was updated
-                                    if ($_GET['info'] == "updatelink") {
+                                    elif ($_GET['info'] == "updatelink") {
                                         echo '<h2 id="updateinfo" style="color:green;">The URL was updated</h2><script>setTimeout(() => {const elem = document.getElementById("updateinfo");elem.parentNode.removeChild(elem);}, 4000);</script>';
                                     }
                                     // Displays the user the output that the URL was deleted
