@@ -22,7 +22,7 @@ $sql = "CREATE TABLE accounts (
     permissions TEXT NOT NULL
 );";
 $hashedpwd = password_hash($newuserpassword, PASSWORD_BCRYPT);
-$sql1 = "INSERT INTO accounts (username, password, permissions) VALUES ('$newusername', $hashedpwd, 'admin');";
+$sql1 = "INSERT INTO accounts (username, password, permissions) VALUES ('$newusername', '$hashedpwd', 'admin');";
 $sql2 = "CREATE TABLE url (
     url_id int(255) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     url_short TEXT NOT NULL,
