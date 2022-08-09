@@ -52,7 +52,11 @@ exit;
 - Make sure you have configured right the database connection.
 - When you have changed the config you want to have it, then you are ready.
 - Then you must edit the init.php in the web root directory there you have to type in your username and your password for the new user, this file will delete after initialization.
-##### Execute this command for initialisation
+##### Execute this command for initialization
 ```bash
-curl -q https://your_server_name/setup.php
+curl -q https://your_server_name/init.php
+rm init.php
 ```
+### Use
+- After initialization go to your URL shortener instance URL, you will automatically be redirected to the login page.
+- Log in and have fun with this program.
