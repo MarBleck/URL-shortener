@@ -31,12 +31,6 @@ $sql2 = "CREATE TABLE url (
     url_user TEXT NOT NULL,
     url_date TEXT NOT NULL
 )";
-$file_pointer = "init.php";
-  
-// Use unlink() function to delete a file
-if (!unlink($file_pointer)) {
-    echo ("$file_pointer cannot be deleted due to an error");
-}
-else {
-    echo ("$file_pointer has been deleted");
-}
+$run = mysqli_query($conn, $sql);
+$run1 = mysqli_query($conn, $sql1);
+$run2 = mysqli_query($conn, $sql2);
