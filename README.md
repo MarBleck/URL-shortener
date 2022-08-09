@@ -55,4 +55,5 @@ exit;
 ##### Execute this command for initialisation
 ```bash
 curl -q https://your_server_name/setup.php
+rm init.php
 ```
