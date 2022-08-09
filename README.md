@@ -51,7 +51,7 @@ exit;
 - Edit in the folder the `inc/config.inc.php` there you find all the configurations settings.
 - Make sure you have configured right the database connection.
 - When you have changed the config you want to have it, then you are ready.
-- Then you must edit the init.php in the web root directory there you have to type in your username and your password for the new user, this file will delete after initialization.
+- Then you must edit the `init.php` in the web root directory there you have to type in your username and your password for the new user, this file will delete after initialization.
 #### Execute this command for initialization
 ```bash
 curl -q https://your_server_name/init.php
