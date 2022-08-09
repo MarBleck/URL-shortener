@@ -9,9 +9,9 @@ You have to clone this reposetory
 ## About
 This URL shortener is written in PHP, and it's lightweight with all basic features and some extra features.
 ### Requirements
-Web server `Apache` or `Nginx`
-PHP no matter which version
-MySQL or MariaDB
+- Web server `Apache` or `Nginx`
+- PHP no matter which version
+- MySQL or MariaDB
 ### Included services:
 - 'URL shortener' => Short all your url's
 - 'Login' => The login mask to log into your URL shortener
