@@ -31,7 +31,7 @@ apt -y install git
 ```
 ### Clone this Repository
 ```bash
-git clone https://github.dev/marlonbde/URL-shortener.git
+git clone https://github.com/marlonbde/URL-shortener.git
 ```
 ### Configuration
 #### MySQL database
