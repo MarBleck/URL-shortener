@@ -1,4 +1,9 @@
 <?php
+/*
+ * URL shortener (https://github.com/marlonbde/URL-shortener)
+ * Copyright 2022 Marlon Bleckwehl
+ * Licensed under BSD 2-Clause "Simplified" License (https://github.com/marlonbde/URL-shortener/blob/main/license)
+ */
 // Include general configs
 require_once 'inc/config.inc.php';
 require_once 'inc/oth.inc.php';
@@ -42,19 +47,22 @@ if ($server_url != $newdomain) {
                 $row_url_length = strlen($row_url['url_short']);
                 // If the length of the shorten URL and the shorten URL in the database the same then start redirect
                 if ($row_url_length == $shorturllength) {
-                    // Checks is the link analytics enabled
-                    if ($enable_link_analytics == true) {
-                        // When the link analytics is active, the script add one to the count in the database
-                        $link_analytics_count = intval($row_url['url_clicks']) + 1;
-                        // Prepare the MySQL statement
-                        $sql = "UPDATE url SET url_clicks='".$link_analytics_count."' WHERE url_id=".$row_url['url_id']."";
-                        // Execute the MySQL statement
-                        mysqli_query($conn, $sql);
+                    // Check if the short URL is the same as in the Database
+                    if ($str1 == $row_url['url_short']) {
+                        // Checks is the link analytics enabled
+                        if ($enable_link_analytics == true) {
+                            // When the link analytics is active, the script add one to the count in the database
+                            $link_analytics_count = intval($row_url['url_clicks']) + 1;
+                            // Prepare the MySQL statement
+                            $sql = "UPDATE url SET url_clicks='".$link_analytics_count."' WHERE url_id=".$row_url['url_id']."";
+                            // Execute the MySQL statement
+                            mysqli_query($conn, $sql);
+                        }
+                        // Redirect the user, close the MySQL connection and exit the script
+                        header("location: ".$row_url['url_long']."");
+                        $conn->close();
+                        exit();
                     }
-                    // Redirect the user, close the MySQL connection and exit the script
-                    header("location: ".$row_url['url_long']."");
-                    $conn->close();
-                    exit();
                 } else {
                     # nothing
                 }
