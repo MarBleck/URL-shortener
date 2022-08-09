@@ -52,13 +52,13 @@ exit;
 - Make sure you have configured right the database connection.
 - When you have changed the config you want to have it, then you are ready.
 - Then you must edit the `init.php` in the web root directory there you have to type in your username and your password for the new user, this file will delete after initialization.
+#### When you use nginx as Web server
+- Please make sure you have the location tags out of the `nginx-location.conf` pasted into your nginx virtual host config and deleted all old location tags.
 #### Execute this command for initialization
 ```bash
 curl -q https://your_server_name/init.php
 rm init.php
 ```
-#### When you use nginx as Web server
-- Please make sure you have the location tags out of the `nginx-location.conf` pasted into your nginx virtual host config and deleted all old location tags.
 ### Use
 - Please make sure that you deleted all extra stuff how `nginx-location.conf` and `README.md` this can handycap the URL shortener
 - After initialization go to your URL shortener instance URL, you will automatically be redirected to the login page.
