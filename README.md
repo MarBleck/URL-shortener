@@ -54,6 +54,9 @@ exit;
 - Then you must edit the `init.php` in the web root directory there you have to type in your username and your password for the new user, this file will delete after initialization.
 #### When you use nginx as Web server
 - Please make sure you have the location tags out of the `nginx-location.conf` pasted into your nginx virtual host config and deleted all old location tags.
+- Make also sure you have in your index configuration index.php, else it doesn't work.
+- #### When you use Apache2 as Web server
+- Please make sure you have the 'AllowOverride All' in the directory activated in the apache2.conf file.
 #### Execute this command for initialization
 ```bash
 curl -q https://your_server_name/init.php
