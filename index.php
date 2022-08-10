@@ -32,7 +32,11 @@ if ($server_url != $newdomain) {
     $check = $conn->query("SELECT url_short FROM url WHERE url_short = '".$str1."'");
     if($check->num_rows == 0) {
         // When the URL doesn't exist then it displays an error message and exit the script
+        // Echo that the page was not found on the system (error 404)
+        header("HTTP/1.0 404 Not Found");
+        // Displays the error message
         echo $error_message;
+        // Exit the script
         exit();
     } else {
         // Select all from the Table 'url' and get data
