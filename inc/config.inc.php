@@ -18,7 +18,7 @@ $admin_email = "Your admin email";
 $replace_at_str = str_replace("@", "[at]", $admin_email);
 
 // Error message for errors with the URL shortener
-$error_message = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>This URL doesn\'t exist</title><style>* {font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";}</style></head><body><p>This short URL was not found in the API, please contact the person who was sending you this link. <br> Are you the person who create this link? When yes, please contact the administrator! <b><i>'.$replace_at_str.'</i></b><p></body></html>';
+$error_message = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>This URL doesn\'t exist</title><style>* {font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";}</style></head><body><p>This short URL was not found in the API, please contact the person who was sending you this link. <br> Are you the person who create this link? When yes, please contact the administrator! <b><i>'.$replace_at_str.'</i></b></p></body></html>';
 
 // Allow registration on this URL shortener
 // To create the first account, this has to been enabled 'true'
