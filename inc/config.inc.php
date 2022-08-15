@@ -59,3 +59,7 @@ $enable_user_can_delete_account = true;
 // Shows a GitHub link to my repository from this URL shortener
 // When you want to disable this feature, set it to false
 $show_github_link = true;
+
+// Enable main.php (CSS main file) cache
+// When you want to disable CSS cache, set this variable to false
+$css_cache = true;
