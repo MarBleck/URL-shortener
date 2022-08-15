@@ -1,11 +1,20 @@
 <?php 
+    // Include main configuration file
+    include_once '../../inc/config.inc.php';
+    // Set the content-type header to text/css
     header('Content-Type:text/css');
-    // header('Cache-Control: max-age=15552000');
-    header('Expires: Thu, 01-Jan-70 00:00:01 GMT');
-    header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT');
-    header('Cache-Control: no-store, no-cache, must-revalidate');
-    header('Cache-Control: post-check=0, pre-check=0', false);
-    header('Pragma: no-cache');
+    // Check if the cache for this file is active
+    if ($css_cache == true) {
+        header('Cache-Control: max-age=15552000');
+    }
+    // If the cache for this file disabled, set headers to disable caching in browser
+    else {
+        header('Expires: Thu, 01-Jan-70 00:00:01 GMT');
+        header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT');
+        header('Cache-Control: no-store, no-cache, must-revalidate');
+        header('Cache-Control: post-check=0, pre-check=0', false);
+        header('Pragma: no-cache');
+    }
 ?>
 @charset "UTF-8";
 /**
