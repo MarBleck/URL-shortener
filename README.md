@@ -1,9 +1,6 @@
 # URL-shortener
 This is an URL shortener written in php with connection to mysql
 
-## How to use
-You have to clone this reposetory 
-
 # URL-shortener
 
 ## About
