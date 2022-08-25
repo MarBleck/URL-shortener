@@ -26,6 +26,13 @@ if ($server_url == $newdomain) {
     header("location: ".$nourl."");
     exit();
 }
+// Check if the requested URL is equal to the admin URL
+if ($str1 == "admin") {
+    // Redirect the user to the admin panel
+    header("location: /admin/");
+    // Exit the script
+    exit();
+}
 // Check if the requested URL is not equal to the domain name with nothing URL short link
 if ($server_url != $newdomain) {
     // Checks if the Short URL in the database exist
